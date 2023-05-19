@@ -1,0 +1,68 @@
+
+.center{
+text-align: center;
+}
+button{
+position: absolute;
+top: 50%;
+border:none;
+padding:20px;
+background: #fff;
+border-radius: 10px;
+color:black;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+transition:0.3s;
+}
+button:hover{
+background:orange;
+color:white;
+}
+#toast {
+cursor: pointer;
+z-index: -1;
+position:relative;
+visibility: hidden;
+min-width: 250px;
+margin-left: -200px;
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+color: black;
+text-align: center;
+border-radius: 10px;
+padding: 16px;
+position: fixed;
+z-index: 1;
+left: 50%;
+bottom: 30px;
+font-size: 16px;
+}
+
+#toast.show {
+visibility: visible;
+-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+from {bottom: 0; opacity: 0;} 
+to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+from {bottom: 0; opacity: 0;}
+to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+from {bottom: 30px; opacity: 1;} 
+to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+from {bottom: 30px; opacity: 1;}
+to {bottom: 0; opacity: 0;}
+}
+.checkicon i{
+    font-size: 40px;
+    color: #47d764;
+}
